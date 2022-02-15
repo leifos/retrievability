@@ -36,7 +36,7 @@ def process_results(result_file,  out_file, c, b):
 
 
 def parse_args():
-    arg_parser = argparse.ArgumentParser(description="Calculator")
+    arg_parser = argparse.ArgumentParser(description="Document Retrievability Calculator")
     arg_parser.add_argument("result_file",
                             help="TREC formatted results file. Six column tab/space sep file with fields:"
                                  " topic_id element_type doc_id rank score run_id.")

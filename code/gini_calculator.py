@@ -31,7 +31,7 @@ def process_results(ret_file):
             line = rf.readline().strip()
             if not line:
                 break
-            (doc_id, score) = line.split()
+            (doc_id, score) = line.split('\t')
             doc_id = doc_id.strip()
             score = float(score.strip())
             ret_scores.append(score)
@@ -45,7 +45,7 @@ def process_results(ret_file):
 
 
 def parse_args():
-    arg_parser = argparse.ArgumentParser(description="Gini Cofficient")
+    arg_parser = argparse.ArgumentParser(description="Gini Cofficient Calculator")
     arg_parser.add_argument("ret_file", help="A retrievability file. Two colum tab/space sep file with fields:"
                                              "doc_id retrievability_score")
     args = arg_parser.parse_args()
